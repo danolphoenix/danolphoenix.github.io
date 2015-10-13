@@ -1,21 +1,34 @@
-# Documentation
+##[点我查看中文说明](https://github.com/dubuyuye/blog/blob/gh-pages/README_zh_CN.md)
 
-Compass is a Jekyll theme designed with something very specific in mind: to be a simple and elegant personal landing page that can be easily deployed to [GitHub Pages](https://pages.github.com/).
+# Blog Address
 
-## How to use Compass
+<http://blog.rainyalley.com/>
 
-1. Start by [installing Bundler](http://bundler.io) `gem install bundler`
-2. [Fork the Compass repository](https://github.com/excentris/compass/fork)
-3. Then run `bundle install` to get [Jekyll](http://jekyllrb.com) and all the dependencies.
-4. Clone the repository you just forked: `git clone https://github.com/YOUR-USER/compass`
-5. Edit `_config.yml` as needed.
-6. Run the Jekyll server with `bundle exec jekyll serve`
-7. Go to `http://localhost:4000`
 
-## Deploy your site to GitHub Pages
+# Must Modify
 
-If you want to use Compass as your personal landing page you can deploy your site to GitHub Pages as a [User Page](https://help.github.com/articles/user-organization-and-project-pages/#user--organization-pages). To do so, when you are done modifying your clone, you should rename your repository to `username.github.io` where username is your username. When GitHub builds the page it will be made available at `https://username.github.io`.
+## 1.swiftype
 
-If you are planning on using a custom domain to direct to your site, modify the CNAME file as described [here](https://help.github.com/articles/adding-a-cname-file-to-your-repository/).
+This service provides the on-site search function.
 
-Check the [GitHub Pages Basics](https://help.github.com/categories/github-pages-basics/) for more information.
+Service address： <https://swiftype.com/>.
+
+After the setup is complete， you need to modify the `swiftype_searchId` in `_config.yml`.
+
+In your swiftype engine, go to `Setup and integration` -> `Install Search`, you could find the `swiftype_searchId`.
+
+```html
+<script type="text/javascript">
+...
+...
+  _st('install','swiftype_searchId','2.0.0');
+</script>
+```
+
+## 2.disqus
+
+This service provides the comment function.
+
+Service address： <https://disqus.com/>.
+
+After the setup is complete， you need to modify the `disqus_shortname` in `_config.yml`.

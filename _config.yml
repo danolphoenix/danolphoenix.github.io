@@ -1,27 +1,44 @@
-# general configuration
-url: http://excentris.net
-baseurl: ''
+permalink: /:year-:month-:day/:title/
 
-# compass configuration
-compass:
-  # an avatar or logo (optional)
-  logo: "/images/compass.png"
-  # author will appear under the avatar (optional)
-  author: "Compass"
-  # tagline will appear under the title (optional)
-  tagline: "The <a href='http://jekyllrb.com'>Jekyll</a> theme for your personal landing page"
-  # if include_content is true, the contents of the content.html include will be
-  # added right above the generated item list, if present
-  include_content: true
-  # if include_analytics is true, the content of the analytics.html include will
-  # be added at the end of the <head> section. You can add your Google Analytics
-  # Tracking Code to that file.
-  include_analytics: false
-
-# Dependencies
-markdown: kramdown
 highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: [
+   "no_intra_emphasis"
+   ,"fenced_code_blocks"
+   ,"autolink"
+   ,"tables"
+   ,"strikethrough"
+   ,"superscript"
+   ,"with_toc_data"
+   ,"footnotes"
+   ,"highlight"
+   ,"underline"
+   ,"quote"
+   ,"lax_spacing"
+   ,"prettify"
+#   ,"html_toc"
+  ]
 
-# Permalinks
-permalink: pretty
-relative_permalinks: true
+
+
+paginate: 10
+paginate_path: ":num"
+baseurl: ""
+
+
+
+title: "RainyAlley"
+email: "dubuyuye@yeah.net"
+description: "Developer"
+github_username:  "dubuyuye"
+swiftype_searchId: "ncwR9a8S9CTx2q9SgsJm"
+disqus_shortname: "rainyalley"
+
+
+
+url: "http://blog.rainyalley.com"
+imgrepo: "http://blog.rainyalley.com/static/img"
+#url: "http://127.0.0.1:4000"
+#imgrepo: "http://127.0.0.1:4000/static/img"
+
