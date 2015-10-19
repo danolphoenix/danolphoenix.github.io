@@ -1,8 +1,8 @@
 ---
-
+layout:post
 title: common blog
-tags: haha
-
+tags: try first
+categories:common
 ---
 
 first Blog
