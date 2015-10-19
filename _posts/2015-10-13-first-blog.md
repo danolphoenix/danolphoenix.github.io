@@ -1,7 +1,7 @@
 ---
 layout:post
 title: common blog
-tags: try first
+tags: try
 categories:common
 ---
 
