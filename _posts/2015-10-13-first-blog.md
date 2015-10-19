@@ -1,8 +1,8 @@
 ---
-layout:post
-title: common blog
+layout: post
+title: first blog
 tags: try
-categories:common
+categories: Linux
 ---
 
 first Blog
