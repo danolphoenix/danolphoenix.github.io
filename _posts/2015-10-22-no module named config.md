@@ -83,7 +83,11 @@ pip install xxx -t 目标dir
 pip list （加--outdated可以看当前版本和最新版本号）
 ~~~
 
-以requirements格式输出安装信息：pip freeze，输出结果可以用于requirements文件中
+以requirements格式输出安装信息：
+
+~~~bash
+pip freeze，输出结果可以用于requirements文件中
+~~~
 
 已经安装包的初步信息：
 
