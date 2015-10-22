@@ -8,13 +8,21 @@ categories: 工作记录
 当把代码上传到gerrit后，会触发jenkins做四项工作，
 
 
-##`1`.git fetch 新的commit并进行merge，
+##`1`.
 
-##`2`.装上requirements.txt和test-requirements.txt里列出的第三方库的包，并对代码进行pep8规范检查
+git fetch 新的commit并进行merge，
 
-##`3`.python27检查本模块测试用例
+##`2`.
 
-##`4`.tempest devstack测试，在某个环境中部署完整的相关服务，并且根据不同的提交运行不同的tempest用例。感觉是写了一些涉及各个模块交互的用例。
+装上requirements.txt和test-requirements.txt里列出的第三方库的包，并对代码进行pep8规范检查
+
+##`3`.
+
+python27检查本模块测试用例
+
+##`4`.
+
+tempest devstack测试，在某个环境中部署完整的相关服务，并且根据不同的提交运行不同的tempest用例。感觉是写了一些涉及各个模块交互的用例。
 
 
 上传了umbxxxa的代码后，在第二步时候时报了个错误
