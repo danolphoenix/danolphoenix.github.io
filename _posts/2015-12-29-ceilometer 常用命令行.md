@@ -38,6 +38,7 @@ usage:
 curl -g -i -X 'GET' 'http://netbetaapi.beta.server.163.org:8777/v2/meters
  
 - 返回示例
+
  > +------------------------------+-------+------+-------------------------------------------------------------------+----------------------------------+----------------------------------+
 | Name                         | Type  | Unit | Resource ID                                                       | User ID                          | Project ID                       |
 +------------------------------+-------+------+-------------------------------------------------------------------+----------------------------------+----------------------------------+
@@ -78,6 +79,7 @@ DEBUG (client) REQ BODY: {"filter": "{\"and\":[{\"=\":{\"counter_name\":\"neteas
 
  
 - 返回示例
+
 > +-------------------------------------------------------------------+------------------------------+-------+----------------+------+---------------------+
 | Resource ID                                                       | Meter                        | Type  | Volume         | Unit | Timestamp           |
 +-------------------------------------------------------------------+------------------------------+-------+----------------+------+---------------------+
@@ -107,7 +109,8 @@ Optional arguments:
 
 
 - 使用示例:
- > $ ceilometer resource-list
+- 
+> $ ceilometer resource-list
 **发往API**:
 curl -g -i -X 'GET' 'http://netbetaapi.beta.server.163.org:8777/v2/resources' -H 'User-Agent: ceilometerclient.openstack.common.apiclient' -H 'X-Auth-Token: {SHA1}f7ec72591f7ae747fd85e2c5e0fa2585f35339b1'
 
@@ -126,6 +129,7 @@ Positional arguments:
 curl -g -i -X 'GET' 'http://netbetaapi.beta.server.163.org:8777/v2/resources/f7d752c0-05f2-43f3-aba2-9fdcc5c8834c.netease.10-180-0-38.nic.eth1.bad9fe29-664e-4097-a906-b2704a9b0ed4.10-180-169-68.trans.rate' -H 'User-Agent: ceilometerclient.openstack.common.apiclient' -H 'X-Auth-Token: {SHA1}0139011442a0bab0fe3bf1097cbddb3353ea1c5d'
 
 - 返回示例
+
 >+-------------+--------------------------------------------------------------------------+
 | Property      | Value                                                                                                        |
 +-------------+--------------------------------------------------------------------------+
@@ -175,6 +179,7 @@ Optional arguments:
    The sample timestamp.
    
 -使用示例:
+
 >  在开发机上：
 ceilometer --debug sample-create -r a014508c-e0fe-42c9-a6c5-dcd4cd0ae1f8 -m cpu --meter-type delta --meter-unit bps --sample-volume 999
 **发往API**:
@@ -182,6 +187,7 @@ ceilometer --debug sample-create -r a014508c-e0fe-42c9-a6c5-dcd4cd0ae1f8 -m cpu 
 DEBUG (client) REQ BODY: [{"counter_type": "delta", "counter_name": "cpu", "resource_id": "a014508c-e0fe-42c9-a6c5-dcd4cd0ae1f8", "counter_unit": "bps", "counter_volume": "999"}]
 
 - 响应示例：
+
 > 返回创建的采样样本
 +-------------------+--------------------------------------------+
 | Property                | Value                                      |
@@ -223,11 +229,13 @@ Optional arguments:
 注意-m选项后面接的是不带uuid的meter_name。
 
 - 使用示例:
+- 
 > hzluodan@10-180-0-24:~$ ceilometer sample-list -m netease.10-180-0-33.cpu.rate -q resource=08407aa0-71ef-43c1-b1b0-c07255d166ca.netease.10-180-0-33.cpu.rate -l 10
 >**发往api**
 >curl -g -i -X 'GET' 'http://10.166.224.20:8777/v2/samples?limit=10
 
 - 响应示例
+
 >+-------------------------------------------------------------------+------------------------------+-------+----------------+------+---------------------+
 | Resource ID                                                       | Name                         | Type  | Volume         | Unit | Timestamp           |
 +-------------------------------------------------------------------+------------------------------+-------+----------------+------+---------------------+
@@ -281,6 +289,7 @@ Optional arguments:
 
 `-q 参数支持` : ['message_id', 'meter', 'project', 'resource', 'search_offset', 'source', 'timestamp', 'user']
 - 使用示例：
+- 
 > $ ceilometer --debug statistics 
 > `-m netease.10-180-0-33.nic.eth0.1967defb-715b-4585-9b90-cb85437e2cdf.10-180-64-38.recv.rate `
 > `-q "resource=08407aa0-71ef-43c1-b1b0-c07255d166ca.netease.10-180-0-33.nic.eth0.1967defb-715b-4585-9b90-cb85437e2cdf.10-180-64-38.recv.rate;timestamp<2015-12-29T02:34:37;timestamp>2015-12-28T01:34:37"`
@@ -289,6 +298,7 @@ Optional arguments:
  curl -g -i -X 'GET' 'http://netbetaapi.beta.server.163.org:8777/v2/meters/netease.10-180-0-33.nic.eth0.1967defb-715b-4585-9b90-cb85437e2cdf.10-180-64-38.recv.rate/statistics?q.field=resource&q.field=timestamp&q.field=timestamp&q.op=eq&q.op=lt&q.op=gt&q.type=&q.type=&q.type=&q.value=08407aa0-71ef-43c1-b1b0-c07255d166ca.netease.10-180-0-33.nic.eth0.1967defb-715b-4585-9b90-cb85437e2cdf.10-180-64-38.recv.rate&q.value=2015-12-29T02%3A34%3A37&q.value=2015-12-28T01%3A34%3A37' -H 'User-Agent: ceilometerclient.openstack.common.apiclient' -H 'X-Auth-Token: {SHA1}938ed4b11ba58b7a2d0fbce16d0b372272bc74ac'
 
 - 响应示例：
+
 >+--------+---------------------+---------------------+---------------+---------------+---------------+---------------+-------+----------+---------------------+---------------------+
 | Period | Period Start        | Period End          | Max           | Min           | Avg           | Sum           | Count | Duration | Duration Start      | Duration End        |
 +--------+---------------------+---------------------+---------------+---------------+---------------+---------------+-------+----------+---------------------+---------------------+
