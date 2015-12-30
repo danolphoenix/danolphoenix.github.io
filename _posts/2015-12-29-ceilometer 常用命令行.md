@@ -7,6 +7,7 @@ categories: 工作记录，ceilometer
 
 # ceilometer 常用命令行
 
+
 > * **[meter-list](#meter-list)**       List the user's meters .获取监控维度列表
 > * **[query-samples](#query-samples)**       Query samples.筛选采样样本
 > * **[resource-list](#resource-list)**       List the resources.获取监控资源列表
@@ -16,8 +17,10 @@ categories: 工作记录，ceilometer
 > * **[sample-show](#sample-show)**                 Show an sample.显示采样样本详情
 > * **[statistics](#statistics)**                  List the statistics for a meter.获取监控维度统计数据
 
+
 <span id="meter-list"> </span>
 ### 1.  ceilometer meter-list
+
 
 List the user's meters. 获取监控维度列表
 usage: 
@@ -31,11 +34,14 @@ usage:
   
   @(FIXME(hzluodan))[pagination在服务端其实还未实现]
  
+
 - 使用示例:
+
 
   > $ ceilometer meter-list -q resource=.*netease.10-180-0-33.mem.used
     **发往API:**
 curl -g -i -X 'GET' 'http://netbetaapi.beta.server.163.org:8777/v2/meters
+
  
 - 返回示例
 
