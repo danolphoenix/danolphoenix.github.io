@@ -1,6 +1,6 @@
 ---
 layout: post
-title: spring读网笔记1 - jdcbTemplate,c3p0,dbcp
+title: spring读网笔记1:jdcbTemplate,c3p0,dbcp
 tags: 码农点滴
 categories: 读网笔记
 ---
