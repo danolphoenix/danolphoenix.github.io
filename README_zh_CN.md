@@ -1,6 +1,6 @@
 # 博客地址
 
-<http://blog.rainyalley.com/>
+<http://danolphoenix.github.io/>
 
 # 必改内容
 
